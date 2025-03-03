@@ -4,15 +4,15 @@ import { getAnalytics } from "firebase/analytics";
 import { getAuth, GoogleAuthProvider, signInWithPopup ,signOut} from "firebase/auth";
 import { getDatabase} from "firebase/database";
 
+// ✅ Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_API_KEY,
-  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_APP_ID,
-  measurementId: import.meta.env.VITE_MEASUREMENT_ID,
-  databaseURL:import.meta.env.VITE_DATABASE_URL
+  apiKey: "AIzaSyAseXZho_Df4hlLXvh5lYg5AXlFUZqHU5Q",
+  authDomain: "myproject-9bc7e.firebaseapp.com",
+  projectId: "myproject-9bc7e",
+  storageBucket: "myproject-9bc7e.appspot.com",
+  messagingSenderId: "761031996090",
+  appId: "1:761031996090:web:80b4d43e27c9c6ab338883",
+  measurementId: "G-YSGKSJG3ML"
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -21,8 +21,6 @@ const analytics = getAnalytics(app);
 export const auth = getAuth(app);
 export  const database = getDatabase(app);
 export default app;
-
-
 
 // ฟังก์ชันสร้างข้อมูล /users/{uid}
 async function createUser(uid, name, email, photo, classroom) {
